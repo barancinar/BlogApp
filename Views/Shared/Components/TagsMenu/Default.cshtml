@@ -1,0 +1,17 @@
+@model List<Tag>
+
+
+<div class="sidebar-item tags">
+    <div class="sidebar-heading">
+        <h2>Tags</h2>
+    </div>
+    <div class="content">
+        <ul>
+            @foreach (var tag in Model)
+            {
+                <li><a href="/posts/tag/@tag.Url">@tag.Text</a></li>
+            }
+
+        </ul>
+    </div>
+</div>
